@@ -58,7 +58,7 @@ defmodule ExMoney.Account do
     from a in ExMoney.Account, where: a.id in ^(ids)
   end
 
-  def show_on_dashboard() do
+  def show_on_dashboard do
     from acc in ExMoney.Account,
       where: acc.show_on_dashboard == true,
       order_by: acc.name

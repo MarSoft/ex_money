@@ -27,6 +27,13 @@ defmodule ExMoney.Router do
     plug Guardian.Plug.LoadResource
   end
 
+  pipeline :graphql do
+    plug :accepts, ["json"]
+    plug Guardian.Plug.VerifyHeader
+    plug Guardian.Plug.LoadResource
+    plug ExMoney.Plugs.GraphqlContext
+  end
+
   scope "/", ExMoney do
     pipe_through [:browser, :browser_session]
 
@@ -100,5 +107,11 @@ defmodule ExMoney.Router do
   scope "/api/v1", ExMoney.Api.V1, as: :api do
     pipe_through [:api]
     get "/session/relogin", SessionController, :relogin
+  end
+
+  scope "/api/v2" do
+    pipe_through [:graphql]
+
+    forward "/", Absinthe.Plug, schema: ExMoney.Schema
   end
 end

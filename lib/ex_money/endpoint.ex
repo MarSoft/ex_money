@@ -35,5 +35,7 @@ defmodule ExMoney.Endpoint do
     key: "_ex_money_key",
     signing_salt: "jxpF+oZR"
 
+  plug CORSPlug
+
   plug ExMoney.Router
 end
