@@ -1,0 +1,40 @@
+{
+  "name": "ExMoney",
+  "description": "A self-hosted personal finance app",
+  "repository": "https://github.com/gaynetdinov/ex_money",
+  "keywords": ["financial", "money", "personal"],
+  "buildpacks": [
+      {"url": "https://github.com/HashNuke/heroku-buildpack-elixir.git"},
+      {"url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static.git"}
+  ],
+  "addons": [
+    "heroku-postgresql",
+    {
+      "plan": "scheduler",
+      "options": {
+        "__TODO": "properly add the job here?",
+        "__job": {
+          "frequency": "daily",
+          "command": "elixir lib/scripts/wakeup.exs"
+        }
+      }
+    }
+  ],
+  "env": {
+    "SECRET_KEY_BASE": {
+    },
+    "CLIENT_ID": {
+    },
+    "SERVICE_SECRET": {
+    },
+    "SALTEDGE_KEY": {
+    },
+    "HOME_URL": {
+    },
+    "TZ": {
+    }
+  },
+  "scripts": {
+    "postdeploy": "mix ecto.migrate"
+  }
+}
