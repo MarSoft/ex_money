@@ -22,16 +22,22 @@
   ],
   "env": {
     "SECRET_KEY_BASE": {
+      "description": "Generate this key by running 'mix phoenix.gen.secret'"
     },
     "CLIENT_ID": {
+      "description": "Grab it from your Saltedge profile: https://www.saltedge.com/clients/profile/secrets"
     },
     "SERVICE_SECRET": {
+      "description": "Grab it from your Saltedge profile: https://www.saltedge.com/clients/profile/secrets"
     },
     "SALTEDGE_KEY": {
+      "description": "Grab it from your Saltedge profile: https://www.saltedge.com/clients/profile/secrets"
     },
     "HOME_URL": {
+      "description": "Hostname for your app e.g 'myapp.herokuapp.com'"
     },
     "TZ": {
+      "description": "Your timezone, e.g. 'Europe/Berlin'"
     }
   },
   "scripts": {
