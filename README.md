@@ -64,6 +64,10 @@ Before using `ExMoney`, please make sure that `Saltedge` supports your bank [her
 
 Please check the [wiki page](https://github.com/gaynetdinov/ex_money/wiki) which describes how to use `ExMoney`.
 
+You can deploy your own app instance on Heroku using this button, but make sure that you configure *Heroku Scheduler* addon manually afterwards -
+consult [wiki](https://github.com/gaynetdinov/ex_money/wiki) for details. No need to run local instance though.
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## Current state
 
 Currently `ExMoney` is a work-in-progress/prototype/'works on my machine' stage.
