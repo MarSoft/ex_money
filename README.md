@@ -66,6 +66,7 @@ Please check the [wiki page](https://github.com/gaynetdinov/ex_money/wiki) which
 
 You can deploy your own app instance on Heroku using this button, but make sure that you configure *Heroku Scheduler* addon manually afterwards -
 consult [wiki](https://github.com/gaynetdinov/ex_money/wiki) for details. No need to run local instance though.
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Current state
